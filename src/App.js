@@ -6,7 +6,7 @@ const App = () => {
     return (
         <>
             <GlobalStyle/>
-              <SignIn title='nome do app vai aqui'/>
+              <SignIn title='Nome do App'/>
         </>
     )
 }
