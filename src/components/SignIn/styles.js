@@ -9,7 +9,7 @@ export const Title = styled.h1`
     justify-content: center;
     flex-direction: column;
     display: flex;   
-    margin: 0 auto 5rem auto;
+    
 `
 
 export const Container = styled.div`
@@ -32,6 +32,7 @@ export const SignInContainer = styled.div`
     font-size: 17px;
     font-weight: bold;
     flex-direction: column;
+    margin: 4rem auto 3rem auto;    
 `
 
 export const SignInInput = styled.input`
