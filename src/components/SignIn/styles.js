@@ -32,7 +32,7 @@ export const SignInContainer = styled.div`
     font-size: 17px;
     font-weight: bold;
     flex-direction: column;
-    margin: 4rem auto 3rem auto;    
+    margin: 4rem auto 2rem auto;    
 `
 
 export const SignInInput = styled.input`
