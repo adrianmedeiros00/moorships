@@ -1,4 +1,4 @@
-import { Container, SignInInput, Button , SignInContainer, Title, TextLink} from './styles'
+import { Container, SignInInput, Button , SignInContainer, Title, TextLink, ButtonContainer } from './styles'
 
 
 export default function SignIn({title}){
@@ -11,7 +11,10 @@ export default function SignIn({title}){
                     <SignInInput type='text' name='name' />
                     <label htmlFor='password'>Senha</label>
                     <SignInInput type='password' name='password' />
-                    <Button>Entrar</Button>
+                        <ButtonContainer>
+                            <Button>Entrar</Button>
+                            <Button>Usuário Comum</Button>
+                        </ButtonContainer>
                     <TextLink href='#'>Esqueceu sua senha?</TextLink>
                 </SignInContainer>
             </Container>

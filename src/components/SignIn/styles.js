@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 
-
 export const Title = styled.h1`
     color: white;
     text-shadow: 0.05em 0.1em 0.3em black;
@@ -10,6 +9,7 @@ export const Title = styled.h1`
     justify-content: center;
     flex-direction: column;
     display: flex;   
+    margin: 0 auto 5rem auto;
 `
 
 export const Container = styled.div`
@@ -31,8 +31,6 @@ export const SignInContainer = styled.div`
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     font-size: 17px;
     font-weight: bold;
-    margin: 4rem auto 4rem auto;
-    display: flex;
     flex-direction: column;
 `
 
@@ -47,11 +45,18 @@ export const SignInInput = styled.input`
     border: solid 1px;
     font-size: 17px;
 `
+
+export const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+
 export const Button = styled.button`
     font-size: 16px;
     height: 37px;
-    width: 100%;
-    padding: 3px;
+    width: 48%; 
+    padding: 0 10px;
     border-radius: 5px;
     border: solid 1px black;
     color: white;
