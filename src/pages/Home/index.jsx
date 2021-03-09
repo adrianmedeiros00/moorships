@@ -1,7 +1,13 @@
 import React from "react";
 
+import { Container, Title } from "./styles";
+
 const Home = () => {
-  return <div>OI</div>;
+  return (
+    <Container>
+      <Title>MoorShips 🚢</Title>
+    </Container>
+  );
 };
 
 export default Home;

@@ -13,7 +13,7 @@ export default createGlobalStyle`
 
     body{
         font-size: 14px;
-        color: #e2e;
+        color: #F5F5F5;
         height: 100%;
     }
 `;
