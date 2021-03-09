@@ -1,12 +1,13 @@
 import React from "react";
 import GlobalStyle from "./styles/global";
-import SignIn from "./pages/SignIn/";
+
+import Routes from "./routes";
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <SignIn title="Nome do App" />
+      <Routes title="Nome do App" />
     </>
   );
 };

@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { Colors } from "../../assets/constants/Colors";
 
 export const Container = styled.div`
   color: black;
   width: 100%;
   max-width: 400px;
   padding: 50px;
-  background-color: #dcdcdc;
+  background-color: ${Colors.primaryColor};
   border-radius: 10px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   font-size: 17px;
