@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 
@@ -15,8 +15,5 @@ export default createGlobalStyle`
         font-size: 14px;
         color: #F5F5F5;
         height: 100%;
-        background: url('images/docknight.jpg') no-repeat fixed right center;
     }
-
-
-`
+`;
