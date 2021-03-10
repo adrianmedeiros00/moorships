@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { Colors } from '../../assets/constants/Colors'
-import backgroundImage from '../../assets/images/docknight.jpg'
+
 
 export const Container = styled.div`
   height: 100vh;
-  background-color: ${Colors.primaryColor};
-  background: url(${backgroundImage}) no-repeat right top fixed;
   display: flex;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 50px;
+  margin-bottom: 40px;
 `;
 
 export const Header = styled.div`
