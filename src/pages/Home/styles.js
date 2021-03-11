@@ -20,6 +20,7 @@ export const Header = styled.div`
 export const Title = styled.h1`
   font-size: 30px;
   color: white;
+  text-shadow: 0.05em 0.1em 0.3em black;
 `;
 
 export const Button = styled.button`
@@ -28,7 +29,7 @@ export const Button = styled.button`
   width: 128px;
   padding: 0 10px;
   border-radius: 5px;
-  border: solid 0.5px black;
+  border: none;
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {

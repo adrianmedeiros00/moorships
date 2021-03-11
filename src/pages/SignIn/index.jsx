@@ -8,7 +8,7 @@ export default function SignIn() {
   return (
     <>
       <Container>
-        <Title>MoorShips</Title>
+        <Title>MoorShips🚢</Title>
         <SignInContainer />
       </Container>
     </>

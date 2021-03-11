@@ -26,14 +26,18 @@ export const SignInInput = styled.input`
   font-size: 17px;
 `;
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
 
 export const Button = styled.button`
   font-size: 16px;
   height: 37px;
-  width: 100%;
+  width: 48%;
   padding: 0 10px;
   border-radius: 5px;
-  border: solid 1px black;
+  border: none;
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {
@@ -41,10 +45,11 @@ export const Button = styled.button`
     cursor: pointer;
   }
 `;
+
+
 export const TextLink = styled.a`
   font-size: 14px;
-  margin: 30px 0 0 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 3rem 50% 0 0;
+  text-decoration: none;
 `;

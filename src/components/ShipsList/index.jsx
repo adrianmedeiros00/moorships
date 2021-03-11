@@ -1,7 +1,12 @@
 import React from "react";
+import {  Container } from "./styles";
 
 const ShipsList = () => {
-  return <div>Lista aqui</div>;
+  return(
+    <Container>
+      
+    </Container>
+  );
 };
 
 export default ShipsList;

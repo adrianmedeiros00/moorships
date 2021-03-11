@@ -1,16 +1,20 @@
 import React from "react";
 import { Container, Title, Button, Header } from "./styles";
-import TableContainer from '../../components/TableContainer/index'
+import ShipsList from "../../components/ShipsList";
 
 const Home = () => {
   return (
+    <>
     <Container>
       <Header>
         <Title>MoorShips🚢</Title>
-        <Button>Login</Button>
+        <a href="/signin">
+          <Button>Login</Button>
+        </a>
       </Header>
-        <TableContainer/>
+        <ShipsList/>  
     </Container>
+    </>
   );
 };
 
