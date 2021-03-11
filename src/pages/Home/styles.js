@@ -29,7 +29,7 @@ export const Button = styled.button`
   width: 128px;
   padding: 0 10px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid ${Colors.secondaryColor};
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {

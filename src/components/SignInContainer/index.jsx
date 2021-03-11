@@ -1,4 +1,5 @@
 import React from "react";
+import { Link }  from 'react-router-dom'
 import {
   SignInInput,
   Button,
@@ -16,10 +17,10 @@ const SignInContainer = () => {
       <SignInInput type="text" name="name" />
       <label htmlFor="password">Senha</label>
       <SignInInput type="password" name="password" />
-          <ButtonContainer>
-                <Button>Voltar</Button>
-                <Button>Entrar</Button>
-          </ButtonContainer>
+            <Link to='/'>
+              <Button>Voltar</Button>
+            </Link>
+              <Button>Entrar</Button>
       <TextLink href="/forgot-password?">Esqueceu sua senha?</TextLink>
     </Container>
   );

@@ -26,18 +26,14 @@ export const SignInInput = styled.input`
   font-size: 17px;
 `;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
 
 export const Button = styled.button`
   font-size: 16px;
   height: 37px;
-  width: 48%;
+  width: 50%;
   padding: 0 10px;
   border-radius: 5px;
-  border: none;
+  border: 2px solid ${Colors.secondaryColor};
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {
