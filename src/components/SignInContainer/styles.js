@@ -23,7 +23,7 @@ export const SignInInput = styled.input`
   padding: 10px;
   display: block;
   border: solid 1px;
-  font-size: 17px;
+  font-size: 16px;
 `;
 
 
@@ -32,8 +32,7 @@ export const Button = styled.button`
   height: 37px;
   width: 50%;
   padding: 0 10px;
-  border-radius: 5px;
-  border: 2px solid ${Colors.secondaryColor};
+  border: 1px solid ${Colors.secondaryColor};
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {

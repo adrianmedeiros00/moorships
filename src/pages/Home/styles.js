@@ -25,11 +25,10 @@ export const Title = styled.h1`
 
 export const Button = styled.button`
   font-size: 16px;
-  height: 37px;
-  width: 128px;
+  height: 34px;
+  width: 150px;
   padding: 0 10px;
-  border-radius: 5px;
-  border: 1px solid ${Colors.secondaryColor};
+  border: none;
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {

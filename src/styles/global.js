@@ -15,6 +15,7 @@ export default createGlobalStyle`
         font-size: 14px;
         color: #F5F5F5;
         height: 100%;
-        background: url(${backgroundImage}) no-repeat right top fixed;
+        //background: url(${backgroundImage}) no-repeat right top fixed;
+        background-color: #1C1C1C;
     }
 `;
