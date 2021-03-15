@@ -7,7 +7,6 @@ export const Container = styled.div`
   max-width: 400px;
   padding: 50px;
   background-color: ${Colors.secondaryColor};
-  border-radius: 10px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   font-size: 17px;
   font-weight: bold;
@@ -18,7 +17,6 @@ export const SignInInput = styled.input`
   width: 100%;
   height: 35px;
   background-color: white;
-  border-radius: 5px;
   margin: 5px 0 20px 0;
   padding: 10px;
   display: block;
