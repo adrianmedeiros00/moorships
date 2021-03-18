@@ -8,10 +8,18 @@ export const Container = styled.div`
   padding: 50px;
   background-color: ${Colors.secondaryColor};
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
-  margin: 4rem auto 4rem auto;
+  margin: 3rem auto 5rem auto;
 `;
+
+export const Title = styled.h1`
+  color: black;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+`
+
 
 export const SignInInput = styled.input`
   width: 100%;
@@ -22,6 +30,7 @@ export const SignInInput = styled.input`
   display: block;
   border: solid 1px;
   font-size: 16px;
+  outline: none;
 `;
 
 
@@ -31,6 +40,7 @@ export const Button = styled.button`
   width: 50%;
   padding: 0 10px;
   border: 1px solid ${Colors.secondaryColor};
+  outline:none;
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {

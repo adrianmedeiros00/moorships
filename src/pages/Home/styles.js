@@ -15,6 +15,7 @@ export const Header = styled.div`
   flex-direction: row;
   margin: 1.5rem 0 2rem 0;
   justify-content: space-between;
+  align-items: center;
 `
 
 export const Title = styled.h1`
@@ -26,9 +27,10 @@ export const Title = styled.h1`
 export const Button = styled.button`
   font-size: 16px;
   height: 34px;
-  width: 150px;
+  width: 145px;
   padding: 0 10px;
   border: none;
+  outline: none;
   color: white;
   background-color: ${Colors.quaternaryColor};
   :hover {
