@@ -4,16 +4,16 @@ import { Colors } from '../../assets/constants/Colors'
 
 export const Container = styled.div`
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 50px;
-  margin-bottom: 40px;
 `;
 
 export const Header = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 1.5rem 0 2rem 0;
+  margin: 2rem 0 3rem 0;
   justify-content: space-between;
   align-items: center;
 `
@@ -32,7 +32,7 @@ export const Button = styled.button`
   border: none;
   outline: none;
   color: white;
-  background-color: ${Colors.quaternaryColor};
+  background-color: ${Colors.secondaryColor};
   :hover {
     background-color: rgba(350,30,60);
     cursor: pointer;

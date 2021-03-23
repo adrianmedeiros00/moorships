@@ -1,4 +1,5 @@
 export const Colors = {
-  secondaryColor: '#D3D3D3',
-  quaternaryColor: '#DC143C'
+  primaryColor: '#363636',
+  secondaryColor: '#DC143C',
+  terciaryColor: 'black',
 };

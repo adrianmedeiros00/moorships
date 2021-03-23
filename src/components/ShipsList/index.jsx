@@ -1,29 +1,62 @@
 import React from "react";
-import HeaderTable from './components/HeaderTable'
-import InfoColumns from './components/InfoColumn'
 
-import { TableContainer, Container, InfoContainerColumn } from "./styles";
+import {
+  Container,
+  Row,
+  Column,
+  HeaderRowColor,
+  InfoContainer
+} from "./styles";
 
-const ShipsList = () => {
+const ShipsList = ({headerTitleColumns, infoColumns}) => {
+
+  const createHeaderColumns = (title) => 
+    title.map( title => {
+        return <Column>{title}</Column>
+    })
+
+  const createInfoColumns = (info) =>
+    info.map( info => {
+      return <Column>{info}</Column>
+    })
+
   return (
     <>
       <Container>
-        <TableContainer>
-          <HeaderTable navio='Navio' berco='Berço' entrada='Entrada' saida='Saída' id='ID' />
-        </TableContainer>
+        <HeaderRowColor>
+          <Row>
+            {createHeaderColumns(headerTitleColumns)}
+          </Row>
+        </HeaderRowColor>
 
-        <InfoContainerColumn>
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-          <InfoColumns navio='info 1' berco='info 2' entrada='info 3' saida='info 4' id='info 5' />
-        </InfoContainerColumn>
+        <InfoContainer>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+          <Row>
+            {createInfoColumns(infoColumns)}
+          </Row>
+        </InfoContainer>
+
+   
       </Container>
     </>
   );
