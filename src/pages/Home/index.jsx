@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Container>
         <Header>
-          <Title>MoorShips</Title>
+          <Title>ShipsMoor</Title>
           <Link to='/signin'>
             <Button>Login</Button>
           </Link>

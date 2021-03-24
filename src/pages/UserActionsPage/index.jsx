@@ -20,7 +20,7 @@ const UserActionsPage = ({ user, actionType }) => {
     return (
         <Container>
             <Header>
-                <Title>MoorShips</Title>
+                <Title>ShipsMoor</Title>
                 <WelcomeText>Bem-vindo, {user}</WelcomeText>
                 <Link to='/signin' style={{textDecoration:'none', width:'150px'}}>
                     <Button>Voltar</Button>
