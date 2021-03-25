@@ -7,13 +7,14 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 50px;
+  padding:  0 50px;
 `;
 
 export const Header = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 2rem 0 3rem 0;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
   justify-content: space-between;
   align-items: center;
 `

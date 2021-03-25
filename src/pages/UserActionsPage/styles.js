@@ -34,9 +34,9 @@ export const UserContainer = styled.div`
 export const ActionsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 60px;
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     background-color: ${Colors.primaryColor};
     font-size: 16px;
     font-weight: bold;
@@ -99,4 +99,7 @@ export const SolicitationBox = styled.div`
   font-weight: lighter;
   color: white;
 `
-
+export const ListContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
+`

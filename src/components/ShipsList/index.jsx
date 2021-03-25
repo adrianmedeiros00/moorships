@@ -8,7 +8,7 @@ import {
   InfoContainer
 } from "./styles";
 
-const ShipsList = ({headerTitleColumns, infoColumns}) => {
+const ShipsList = ({headerTitleColumns, infoColumns, rowsAmount}) => {
 
   const createHeaderColumns = (title) => 
     title.map( title => {
@@ -20,6 +20,18 @@ const ShipsList = ({headerTitleColumns, infoColumns}) => {
       return <Column>{info}</Column>
     })
 
+  const createInfoRows = (rows) => {
+    const rowsContent = []
+    for(let i = 0; i < rows; i++){
+      rowsContent.push(
+      <Row>
+        {createInfoColumns(infoColumns)}
+      </Row>)
+    }
+    return rowsContent
+  }
+    
+
   return (
     <>
       <Container>
@@ -30,33 +42,9 @@ const ShipsList = ({headerTitleColumns, infoColumns}) => {
         </HeaderRowColor>
 
         <InfoContainer>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
-          <Row>
-            {createInfoColumns(infoColumns)}
-          </Row>
+               {createInfoRows(rowsAmount)}
         </InfoContainer>
 
-   
       </Container>
     </>
   );

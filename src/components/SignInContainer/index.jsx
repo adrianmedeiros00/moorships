@@ -20,10 +20,12 @@ const SignInContainer = () => {
       <Link to='/'>
         <Button>Voltar</Button>
       </Link>
-      <Link to='/atracador-actions'>
+      <Link to='/user-actions'>
         <Button>Entrar</Button>
       </Link>
-      <TextLink href="/forgot-password?">Esqueceu sua senha?</TextLink>
+      <Link to='/forgot-password'>
+        <TextLink>Esqueceu sua senha?</TextLink>
+      </Link>
     </Container>
   );
 };

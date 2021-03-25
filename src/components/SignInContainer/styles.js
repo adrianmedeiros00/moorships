@@ -4,7 +4,7 @@ import { Colors } from "../../assets/constants/Colors";
 export const Container = styled.div`
   color: white;
   width: 100%;
-  max-width: 400px;
+  max-width: 438px;
   padding: 50px;
   background-color: ${Colors.primaryColor};
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);

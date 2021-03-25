@@ -2,6 +2,7 @@ import React from "react";
 import ShipsList from "../../components/ShipsList";
 import { Container, Title, Button, Header } from "./styles";
 import { Link } from 'react-router-dom'
+import Footer from "../../layout/Footer";
 
 const Home = () => {
   return (
@@ -13,8 +14,13 @@ const Home = () => {
             <Button>Login</Button>
           </Link>
         </Header>
-        <ShipsList headerTitleColumns={['Navio','Berço','Entrada','Saída','ID']} infoColumns={['info1','info2','info3','info4','info5']}/>
+        <ShipsList
+          headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída', 'ID']}
+          infoColumns={['info1', 'info2', 'info3', 'info4', 'info5']}
+          rowsAmount={10}
+        />
       </Container>
+      <Footer/>
     </>
   );
 };

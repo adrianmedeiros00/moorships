@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import backgroundImage from "../../assets/images/docknight.jpg";
 
 
 export const Container = styled.div`
@@ -9,7 +8,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  //background: url(${backgroundImage}) no-repeat right top fixed;
 `;
 
 
