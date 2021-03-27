@@ -99,7 +99,4 @@ export const SolicitationBox = styled.div`
   font-weight: lighter;
   color: white;
 `
-export const ListContainer = styled.ul`
-  display: flex;
-  flex-direction: column;
-`
+

@@ -10,7 +10,7 @@ import {
 
 const ShipsList = ({headerTitleColumns, infoColumns, rowsAmount}) => {
 
-  const createHeaderColumns = (title) => 
+  const createTitleColumns = (title) => 
     title.map( title => {
         return <Column>{title}</Column>
     })
@@ -37,7 +37,7 @@ const ShipsList = ({headerTitleColumns, infoColumns, rowsAmount}) => {
       <Container>
         <HeaderRowColor>
           <Row>
-            {createHeaderColumns(headerTitleColumns)}
+            {createTitleColumns(headerTitleColumns)}
           </Row>
         </HeaderRowColor>
 

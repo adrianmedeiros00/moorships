@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import Footer from '../../layout/Footer'
 import ShipsList from '../../components/ShipsList/index'
 import { Link } from 'react-router-dom'
@@ -16,19 +15,9 @@ import {
     SolicitationBox,
     WelcomeText,
     ShipsInfoContainer,
-    ListContainer
 } from './styles'
 
 const UserActionsPage = ({ user, actionType }) => {
-
-    const [isListVisible, setListVisible] = useState(false)
-
-
-    const toggleListVisibility = () => {
-        setListVisible(!isListVisible)
-    }
-
-
     return (
         <>
             <Container>
@@ -43,12 +32,7 @@ const UserActionsPage = ({ user, actionType }) => {
                     <ActionsContainer>
                         <ActionsTitle>Ações</ActionsTitle>
                         <ButtonsContainer>
-                            <Button onClick={toggleListVisibility}>
-                                Inserir Navio
-                        </Button>
-                            <ListContainer>
-                                {isListVisible && ['Navio 1','Navio 2',' Navio 3',' Navio 4']}
-                            </ListContainer>
+                            <Button>Inserir Navio</Button>
                             <Button>{actionType}</Button>
                         </ButtonsContainer>
                         <SolicitationsContainer>
