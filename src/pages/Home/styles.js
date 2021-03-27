@@ -4,17 +4,16 @@ import { Colors } from '../../assets/constants/Colors'
 
 export const Container = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  padding:  0 50px;
 `;
 
 export const Header = styled.div`
+  width: 80%;
   display: flex;
+  margin: 3rem auto;
   flex-direction: row;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
   justify-content: space-between;
   align-items: center;
 `
@@ -38,7 +37,6 @@ export const Button = styled.button`
     background-color: rgba(350,30,60);
     cursor: pointer;
   }
-
 `
 
 

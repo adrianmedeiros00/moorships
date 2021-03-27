@@ -4,9 +4,9 @@ import { Container, Title, Button, Header } from "./styles";
 import { Link } from 'react-router-dom'
 import Footer from "../../layout/Footer";
 
+
 const Home = () => {
   return (
-    <>
       <Container>
         <Header>
           <Title>ShipsMoor</Title>
@@ -15,13 +15,12 @@ const Home = () => {
           </Link>
         </Header>
         <ShipsList
-          headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída', 'ID']}
-          infoColumns={['info1', 'info2', 'info3', 'info4', 'info5']}
+          headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída']}
+          infoColumns={['info1', 'info2', 'info3', 'info4']}
           rowsAmount={10}
         />
+        <Footer/>
       </Container>
-      <Footer/>
-    </>
   );
 };
 

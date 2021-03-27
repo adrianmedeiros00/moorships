@@ -9,7 +9,7 @@ export const FooterContainer = styled.div`
     background-color: ${Colors.secondaryColor};
     align-items: center;
     justify-content: center;
-    margin-top: 100%;
+    bottom: 0;
 `
 
 export const FooterText = styled.p`

@@ -42,7 +42,7 @@ const ShipsList = ({headerTitleColumns, infoColumns, rowsAmount}) => {
         </HeaderRowColor>
 
         <InfoContainer>
-               {createInfoRows(rowsAmount)}
+            {createInfoRows(rowsAmount)}
         </InfoContainer>
 
       </Container>

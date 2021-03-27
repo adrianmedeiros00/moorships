@@ -3,12 +3,11 @@ import { Colors } from '../../assets/constants/Colors'
 
 
 export const Container = styled.div`
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  padding: 0 50px;
-`
+`;
 
 export const WelcomeText = styled.h2`
     display: flex;
@@ -19,23 +18,32 @@ export const WelcomeText = styled.h2`
 `
 
 export const ShipsInfoContainer = styled.div`
-  width: 100%;
-  max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background-color: ${Colors.primaryColor};
+    font-size: 16px;
+    font-weight: bold;
 `
-
 
 export const UserContainer = styled.div`
     display: flex;
-    height: 100vh;
-    width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    max-height: 700px;
+    width: 80%;
+    margin: 0 auto;
 `
 export const ActionsContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 60px;
     width: 100%;
+    height: 100%;
     max-width: 500px;
     background-color: ${Colors.primaryColor};
     font-size: 16px;

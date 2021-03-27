@@ -1,14 +1,15 @@
 import styled from 'styled-components'
-import { Colors } from '../../assets/constants/Colors'
+
 export const Container = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 80%;
   display: flex;
+  margin: auto;
   flex-direction: column;
 `
 
 export const InfoContainer = styled.div`
-  background-color: ${Colors.primaryColor};
+  background-color: black;
   color: #DCDCDC;
 `
 

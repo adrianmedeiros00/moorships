@@ -48,8 +48,8 @@ const UserActionsPage = ({ user, actionType }) => {
                         <ShipsList headerTitleColumns={['Berços disponíveis', 'Navios na fila']} infoColumns={['info1', 'info2']} rowsAmount={10} />
                     </ShipsInfoContainer>
                 </UserContainer>
+                <Footer />
             </Container>
-            <Footer />
         </>
     )
 }

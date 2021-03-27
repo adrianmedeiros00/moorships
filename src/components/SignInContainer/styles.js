@@ -10,7 +10,7 @@ export const Container = styled.div`
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   font-size: 16px;
   font-weight: lighter;
-  margin: 3rem auto 5rem auto;
+  margin: 3rem auto;
 `;
 
 export const LoginTitle = styled.h1`
@@ -19,7 +19,6 @@ export const LoginTitle = styled.h1`
   display: flex;
   align-items: center;
 `
-
 
 export const SignInInput = styled.input`
   width: 100%;
@@ -33,7 +32,6 @@ export const SignInInput = styled.input`
   outline: none;
   color: white;
 `;
-
 
 export const Button = styled.button`
   font-size: 17px;
@@ -49,7 +47,6 @@ export const Button = styled.button`
     cursor: pointer;
   }
 `;
-
 
 export const TextLink = styled.a`
   font-size: 15px;
