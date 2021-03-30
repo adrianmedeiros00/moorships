@@ -96,8 +96,8 @@ const UserActionsPage = ({ user, actionType }) => {
                 
                     
                 </UserContainer>
+                <Footer />
             </Container>
-            <Footer />
         </>
     )
 }
