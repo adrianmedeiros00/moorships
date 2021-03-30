@@ -33,7 +33,6 @@ const ShipsList = ({headerTitleColumns, infoColumns, rowsAmount}) => {
     
 
   return (
-    <>
       <Container>
         <HeaderRowColor>
           <Row>
@@ -46,7 +45,6 @@ const ShipsList = ({headerTitleColumns, infoColumns, rowsAmount}) => {
         </InfoContainer>
 
       </Container>
-    </>
   );
 };
 

@@ -14,13 +14,13 @@ const Home = () => {
             <Button>Login</Button>
           </Link>
         </Header>
-        <ShipsList
-          headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída', 'ID']}
-          infoColumns={['info1', 'info2', 'info3', 'info4', 'info5']}
-          rowsAmount={10}
-        />
+          <ShipsList
+            headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída']}
+            infoColumns={['info1', 'info2', 'info3', 'info4']}
+            rowsAmount={10}
+          />    
       </Container>
-      <Footer/>
+        <Footer/>
     </>
   );
 };

@@ -3,11 +3,11 @@ import { Colors } from '../../assets/constants/Colors'
 
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100%;
-  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
 `
 
 export const WelcomeText = styled.h2`
@@ -16,28 +16,36 @@ export const WelcomeText = styled.h2`
     justify-content: center;
     color: white;
     font-weight: lighter;
+    font-size: 20px;
 `
 
 export const ShipsInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  height: 100%;
+  max-width: 450px;
 `
 
 
 export const UserContainer = styled.div`
     display: flex;
-    height: 100vh;
-    width: 100%;
+    padding: 50px;
+    align-items: center;
+    background-color: ${Colors.primaryColor};
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    max-height: 700px;
+    width: 100%;
+    border-radius: 20px;
 `
 export const ActionsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 60px;
     width: 100%;
-    max-width: 500px;
-    background-color: ${Colors.primaryColor};
+    height: 100%;
+    max-width: 450px;
     font-size: 16px;
     font-weight: bold;
 `
@@ -59,11 +67,12 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 15px;
+  border-radius: 4px;
   height: 40px;
-  width: 100%;
+  width: 144px;
   max-width: 150px;
-  padding: 0 10px;
+  padding: 10px;
   outline: none;
   border: none;
   color: white;
@@ -98,5 +107,28 @@ export const SolicitationBox = styled.div`
   font-size: 16px;
   font-weight: lighter;
   color: white;
+  border-radius: 5px;
 `
 
+export const FullTable = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 10px;
+`
+export const TableTitle = styled.div`
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+`
+
+export const HeaderTable = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0; 
+`

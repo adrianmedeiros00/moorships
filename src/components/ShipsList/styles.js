@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Colors } from '../../assets/constants/Colors'
+
 export const Container = styled.div`
   height: 100vh;
   width: 100%;
@@ -8,7 +9,7 @@ export const Container = styled.div`
 `
 
 export const InfoContainer = styled.div`
-  background-color: ${Colors.primaryColor};
+  background-color: ${Colors.terciaryColor};
   color: #DCDCDC;
 `
 
@@ -21,6 +22,7 @@ export const Row = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  
 `
 
 
@@ -32,5 +34,4 @@ export const Column = styled.h2`
    justify-content: center;
    align-items: center;
    height: 50px;
-   max-width: 1360px;
 `
