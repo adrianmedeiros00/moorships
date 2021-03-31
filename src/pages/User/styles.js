@@ -4,18 +4,11 @@ import { Colors } from '../../assets/constants/Colors'
 
 export const Container = styled.div`
   height: 100vh;
-<<<<<<< HEAD
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 100px;
+  width: 80%;
+  margin:  auto;
 `
-=======
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-`;
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
+
+
 
 export const WelcomeText = styled.h2`
     display: flex;
@@ -27,57 +20,31 @@ export const WelcomeText = styled.h2`
 `
 
 export const ShipsInfoContainer = styled.div`
-<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   max-width: 450px;
-=======
-    display: flex;
-    flex-direction: column;
-    padding: 60px;
-    width: 100%;
-    height: 100%;
-    max-width: 500px;
-    background-color: ${Colors.primaryColor};
-    font-size: 16px;
-    font-weight: bold;
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
 `
 
 export const UserContainer = styled.div`
     display: flex;
-<<<<<<< HEAD
     padding: 50px;
     align-items: center;
     background-color: ${Colors.primaryColor};
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-height: 700px;
+    height: 100vh;
     width: 100%;
     border-radius: 20px;
-=======
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-height: 700px;
-    width: 80%;
-    margin: 0 auto;
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
 `
 export const ActionsContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
     max-width: 450px;
-=======
-    max-width: 500px;
-    background-color: ${Colors.primaryColor};
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
     font-size: 16px;
     font-weight: bold;
 `
@@ -142,25 +109,3 @@ export const SolicitationBox = styled.div`
   border-radius: 5px;
 `
 
-export const FullTable = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 40px;
-  border-radius: 10px;
-`
-export const TableTitle = styled.div`
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: bold;
-`
-
-export const HeaderTable = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 50px 0; 
-`

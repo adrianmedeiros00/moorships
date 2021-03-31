@@ -10,12 +10,8 @@ export const Container = styled.div`
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   font-size: 16px;
   font-weight: lighter;
-<<<<<<< HEAD
   margin: 2.5rem auto;
   border-radius: 20px;
-=======
-  margin: 3rem auto;
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
 `;
 
 

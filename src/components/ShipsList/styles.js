@@ -1,23 +1,16 @@
 import styled from 'styled-components'
-<<<<<<< HEAD
 import { Colors } from '../../assets/constants/Colors'
-=======
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
 
 export const Container = styled.div`
   height: 100vh;
-  width: 80%;
+  width: 100%;
   display: flex;
   margin: auto;
   flex-direction: column;
 `
 
 export const InfoContainer = styled.div`
-<<<<<<< HEAD
   background-color: ${Colors.terciaryColor};
-=======
-  background-color: black;
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
   color: #DCDCDC;
 `
 

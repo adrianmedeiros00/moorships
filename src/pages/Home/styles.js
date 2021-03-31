@@ -4,11 +4,7 @@ import { Colors } from '../../assets/constants/Colors'
 
 export const Container = styled.div`
   height: 100vh;
-<<<<<<< HEAD
   width: 80%;
-=======
-  width: 100vw;
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
   display: flex;
   margin: auto;
   flex-direction: column;
@@ -17,14 +13,9 @@ export const Container = styled.div`
 export const Header = styled.div`
   width: 80%;
   display: flex;
-<<<<<<< HEAD
   width: 100%;
   flex-direction: row;
   margin: 3rem auto;
-=======
-  margin: 3rem auto;
-  flex-direction: row;
->>>>>>> d9a01876945a56b4174e65d93d2eba9704d9e53f
   justify-content: space-between;
   align-items: center;
 `
