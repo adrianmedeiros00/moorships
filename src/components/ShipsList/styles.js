@@ -10,13 +10,13 @@ export const Container = styled.div`
 `
 
 export const InfoContainer = styled.div`
-  background-color: ${Colors.primaryColor};
-  color: black;
+  background-color: ${Colors.secondaryColor};
+  color: ${Colors.primaryColor};
   border-radius: 0 0 10px 10px;
 `
 
 export const HeaderRowColor = styled.div`
-  background-color: ${Colors.quaternaryColor};
+  background-color: black;
   color: white;
   border-radius: 10px 10px 0 0;
 `

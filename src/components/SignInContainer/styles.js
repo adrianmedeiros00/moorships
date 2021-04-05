@@ -53,9 +53,9 @@ export const Button = styled.button`
   border: none;
   outline:none;
   color: white;
-  background-color: ${Colors.secondaryColor};
+  background-color: ${Colors.quaternaryColor};
   :hover {
-    background-color: ${Colors.quaternaryColor};
+    background-color: ${Colors.secondaryColor};
     cursor: pointer;
   }
 `;
