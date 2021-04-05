@@ -9,6 +9,7 @@ import {
   LoginTitle,
   MiniHeader
 } from "./styles";
+import { Colors } from "../../assets/constants/Colors";
 
 
 const SignInContainer = () => {
@@ -18,7 +19,7 @@ const SignInContainer = () => {
         <LoginTitle>Login</LoginTitle>
         <Link to='/' 
           style={{ textDecoration: 'none', 
-          color:'blueviolet', 
+          color:`${Colors.quaternaryColor}`, 
           display: 'flex', 
           alignItems:'center',
           justifyContent:'center',

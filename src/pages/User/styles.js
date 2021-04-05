@@ -14,7 +14,7 @@ export const WelcomeText = styled.h2`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
     font-weight: lighter;
     font-size: 20px;
 `
@@ -50,7 +50,7 @@ export const ActionsContainer = styled.div`
 `
 
 export const ActionsTitle = styled.h1`
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   margin: 0 auto 20px 0;
@@ -77,7 +77,7 @@ export const Button = styled.button`
   color: white;
   background-color: ${Colors.secondaryColor};
   :hover {
-    background-color: rgba(350,30,60);
+    background-color: ${Colors.quaternaryColor};
     cursor: pointer;
   }
 `
@@ -89,7 +89,7 @@ export const SolicitationsContainer = styled.div`
 `
 
 export const SolicitationsTitle = styled.h1`
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     margin: auto auto 20px 0;
@@ -100,7 +100,7 @@ export const SolicitationBox = styled.div`
   width: 100%;
   margin-bottom: 5px;
   padding: 20px;
-  background-color: black;
+  background-color: ${Colors.secondaryColor};
   align-items: center;
   justify-content: center;
   font-size: 16px;

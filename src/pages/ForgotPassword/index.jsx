@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button, Container, LoginTitle, MiniHeader, SignInInput } from '../../components/SignInContainer/styles'
 import { Text } from './styles'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+import { Colors } from '../../assets/constants/Colors'
 
 export const ForgotPassword = () => {
     return (
@@ -12,7 +13,7 @@ export const ForgotPassword = () => {
                 <Link to='/signin' 
                 style={{
                     textDecoration:'none', 
-                    color:'blueviolet', 
+                    color:`${Colors.quaternaryColor}`, 
                     display: 'flex', 
                     alignItems:'center',
                     justifyContent:'center',

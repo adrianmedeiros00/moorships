@@ -17,6 +17,6 @@ export const Select = styled.select`
     font-weight: bold;
     border: none;
     outline: none;
-    color: white;
+    color: black;
     background-color: ${Colors.terciaryColor};
 `

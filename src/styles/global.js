@@ -12,8 +12,6 @@ export default createGlobalStyle`
 
 
     body{
-        font-size: 14px;
-        color: #F5F5F5;
-        background-color: #1C1C1C;
+        background-color: #C0C0C0;
     }
 `;

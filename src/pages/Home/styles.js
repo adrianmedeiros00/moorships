@@ -38,7 +38,7 @@ export const Button = styled.button`
   color: white;
   background-color: ${Colors.secondaryColor};
   :hover {
-    background-color: rgba(350,30,60);
+    background-color: ${Colors.quaternaryColor};
     cursor: pointer;
   }
 `

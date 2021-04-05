@@ -10,13 +10,15 @@ export const Container = styled.div`
 `
 
 export const InfoContainer = styled.div`
-  background-color: ${Colors.terciaryColor};
-  color: #DCDCDC;
+  background-color: ${Colors.primaryColor};
+  color: black;
+  border-radius: 0 0 10px 10px;
 `
 
 export const HeaderRowColor = styled.div`
-  background-color: blueviolet;
+  background-color: ${Colors.quaternaryColor};
   color: white;
+  border-radius: 10px 10px 0 0;
 `
 
 export const Row = styled.div`
@@ -28,7 +30,7 @@ export const Row = styled.div`
 
 
 export const Column = styled.h2`
-   border: 1px solid #1C1C1C; 
+   border: 1px solid ${Colors.terciaryColor}; 
    font-weight: lighter;
    width: 100%;
    display: flex;

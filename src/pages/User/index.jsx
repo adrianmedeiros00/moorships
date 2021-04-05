@@ -57,7 +57,7 @@ const UserActionsPage = ({ user, actionType }) => {
                     <Link to='/signin'
                         style={{
                             textDecoration: 'none',
-                            color: `${Colors.secondaryColor}`,
+                            color: '#DC143C',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',

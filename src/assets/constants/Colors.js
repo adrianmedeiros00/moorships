@@ -1,6 +1,6 @@
 export const Colors = {
-  primaryColor: '#363636',
-  secondaryColor: '#DC143C',
-  terciaryColor: 'black',
-  quaternaryColor:'blueviolet'
+  primaryColor: '#DCDCDC',
+  secondaryColor: '#4F4F4F',
+  terciaryColor: '#C0C0C0',
+  quaternaryColor:'#000080'
 };

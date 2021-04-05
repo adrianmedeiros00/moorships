@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { Colors } from "../../assets/constants/Colors";
 
 export const Container = styled.div`
-  color: white;
+  color: black;
   width: 80%;
   max-width: 430px;
   padding: 50px;
   background-color: ${Colors.primaryColor};
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: bold;
   margin: 2.5rem auto;
   border-radius: 20px;
 `;
@@ -23,7 +23,7 @@ export const MiniHeader = styled.div`
 
 
 export const LoginTitle = styled.h1`
-  color: white;
+  color: black;
   margin-bottom: 35px;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ export const Button = styled.button`
   color: white;
   background-color: ${Colors.secondaryColor};
   :hover {
-    background-color: rgba(350,30,60);
+    background-color: ${Colors.quaternaryColor};
     cursor: pointer;
   }
 `;
@@ -65,5 +65,5 @@ export const TextLink = styled.a`
   display: flex;
   width: 100%;
   margin: 3rem 50% 0 0;
-  color: blueviolet;
+  color: ${Colors.quaternaryColor};
 `;

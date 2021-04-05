@@ -1,5 +1,5 @@
-import { Button } from '../../pages/User/styles'
 import React from 'react'
+import { Button } from '../../pages/User/styles'
 import { HeaderTable, TableTitle, ModalTable, ModalContainer } from '../Modal/styles'
 import { SelectContainer, Select } from './styles'
 
