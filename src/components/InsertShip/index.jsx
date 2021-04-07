@@ -1,13 +1,10 @@
 import React from 'react'
 import { Button } from '../../pages/User/styles'
-import { HeaderTable, TableTitle, ModalTable, ModalContainer } from '../Modal/styles'
+import { HeaderTable, TableTitle, ModalTable, ModalContainer } from '../ModalShipsList/styles'
 import { SelectContainer, Select } from './styles'
 
 
 const InsertShip = () => {
-
-
-
     return (
         <ModalTable>
             <ModalContainer>
@@ -35,7 +32,6 @@ const InsertShip = () => {
                     </Select>
                     <Button>Confirmar</Button>
                 </SelectContainer>
-
             </ModalContainer>
         </ModalTable>
     )

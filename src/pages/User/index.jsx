@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import Footer from '../../layout/Footer'
 import ShipsList from '../../components/ShipsList/index'
-import { Colors } from '../../assets/constants/Colors'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CloseToToneIcon from '@material-ui/icons/CloseTwoTone'
 import { ExitToApp } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
 import { Header, Title } from '../Home/styles'
-import Modal from '../../components/Modal';
+import ModalShipsList from '../../components/ModalShipsList';
 import {
     Container,
     UserContainer,
@@ -22,18 +21,28 @@ import {
     ShipsInfoContainer,
 } from './styles'
 import InsertShip from '../../components/InsertShip';
+import ModalRequestEditing from '../../components/ModalRequestEditing';
 
 
 const UserActionsPage = ({ user, actionType }) => {
 
     const [isModalTableVisible, setModalTableVisible] = useState(false)
     const [isModalInsertVisible, setModalInsertVisible] = useState(false)
+    const [isModalSolicitationEditingVisible, setModalSolicitationEditingVisible] = useState(false)
 
     return (
         <>
+            {isModalSolicitationEditingVisible &&
+                <>
+                    <ModalRequestEditing />
+                    <Button onClick={() => setModalSolicitationEditingVisible(!isModalSolicitationEditingVisible)} style={{ width: '30px', height: '30px', position:'absolute', marginLeft:'85.8%'}}>
+                        <CloseToToneIcon fontSize='small' />
+                    </Button>
+                </>
+            }
             {isModalTableVisible &&
                 <>
-                    <Modal />
+                    <ModalShipsList />
                     <Button onClick={() => setModalTableVisible(!isModalTableVisible)} style={{ width: '30px', height: '30px', position:'absolute', marginLeft:'85.8%'}}>
                         <CloseToToneIcon fontSize='small' />
                     </Button>
@@ -73,7 +82,7 @@ const UserActionsPage = ({ user, actionType }) => {
                         <ActionsTitle>Ações</ActionsTitle>
                         <ButtonsContainer>
                             <Button onClick={() => setModalInsertVisible(!isModalInsertVisible)}>Inserir Navio</Button>
-                            <Button>{actionType}</Button>
+                            <Button onClick={() => setModalSolicitationEditingVisible(!isModalSolicitationEditingVisible)}>{actionType}</Button>
                             <Button onClick={() => setModalTableVisible(!isModalTableVisible)}>Atracações</Button>
                         </ButtonsContainer>
                         <SolicitationsContainer>
