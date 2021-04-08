@@ -1,16 +1,16 @@
 import React from 'react'
 import { Button } from '../../pages/User/styles'
-import { HeaderTable, TableTitle, ModalTable, ModalContainer } from '../ModalShipsList/styles'
+import { Header, Title, Modal, ModalContainer } from '../ModalShipsList/styles'
 import { SelectContainer, Select } from './styles'
 
 
 const InsertShip = () => {
     return (
-        <ModalTable>
-            <ModalContainer>
-                <HeaderTable>
-                    <TableTitle>Inserir Navio</TableTitle>
-                </HeaderTable>
+        <ModalContainer>
+            <Modal>
+                <Header>
+                    <Title>Inserir Navio</Title>
+                </Header>
                 <SelectContainer>
                     <Select name="ship" id="ships">
                         <option value="Navio 1">Navio 1</option>
@@ -32,8 +32,8 @@ const InsertShip = () => {
                     </Select>
                     <Button>Confirmar</Button>
                 </SelectContainer>
-            </ModalContainer>
-        </ModalTable>
+            </Modal>
+        </ModalContainer>
     )
 }
 

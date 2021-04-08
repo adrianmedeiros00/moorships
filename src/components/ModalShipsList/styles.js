@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-export const ModalTable = styled.div`
+export const ModalContainer = styled.div`
   height: 100vh;
   width:  100%;
   position: absolute;
@@ -13,7 +13,7 @@ export const ModalTable = styled.div`
   align-items: center;
 `
 
-export const ModalContainer = styled.div`
+export const Modal = styled.div`
   height: 100vh;
   width: 76%;
   display: flex;
@@ -21,7 +21,7 @@ export const ModalContainer = styled.div`
 `
 
 
-export const TableTitle = styled.div`
+export const Title = styled.div`
   color: white;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ export const TableTitle = styled.div`
   font-weight: bold;
 `
 
-export const HeaderTable = styled.div`
+export const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

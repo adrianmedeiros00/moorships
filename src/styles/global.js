@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Colors } from "../assets/constants/Colors";
 
 
 export default createGlobalStyle`
@@ -12,7 +13,7 @@ export default createGlobalStyle`
 
 
     body{
-        background-color: black
+        background-color: ${Colors.backgorund};
         ;
     }
 `;

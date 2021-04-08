@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button } from '../../pages/User/styles'
 import {
-    HeaderTable,
+    Header,
     ModalContainer,
-    ModalTable,
-    TableTitle
+    Modal,
+    Title
 } from '../ModalShipsList/styles'
 
 import { SolicitationEditingContainer, TextBox, TextBoxTitle } from './styles'
@@ -12,18 +12,18 @@ import { SolicitationEditingContainer, TextBox, TextBoxTitle } from './styles'
 
 const ModalRequestEditing = () => {
     return (
-        <ModalTable>
-            <ModalContainer>
-                <HeaderTable>
-                    <TableTitle>Solicitar edição</TableTitle>
-                </HeaderTable>
+        <ModalContainer>
+            <Modal>
+                <Header>
+                    <Title>Solicitar edição</Title>
+                </Header>
                 <TextBoxTitle>Digite a edição que deseja:</TextBoxTitle>
                     <SolicitationEditingContainer>
                     <TextBox />
                     <Button>Criar Solicitação</Button>
                     </SolicitationEditingContainer>
-            </ModalContainer>
-        </ModalTable>
+            </Modal>
+        </ModalContainer>
     )
 }
 
