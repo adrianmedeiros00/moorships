@@ -19,4 +19,5 @@ export const Select = styled.select`
     outline: none;
     color: black;
     background-color: ${Colors.terciaryColor};
+    border-radius: 5px;
 `

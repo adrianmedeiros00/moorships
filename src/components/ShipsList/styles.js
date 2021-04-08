@@ -16,7 +16,7 @@ export const InfoContainer = styled.div`
 `
 
 export const HeaderRowColor = styled.div`
-  background-color: black;
+  background-color: ${Colors.quaternaryColor};
   color: white;
   border-radius: 10px 10px 0 0;
 `
@@ -30,7 +30,7 @@ export const Row = styled.div`
 
 
 export const Column = styled.h2`
-   border: 1px solid ${Colors.terciaryColor}; 
+   border: 1px solid black; 
    font-weight: lighter;
    width: 100%;
    display: flex;

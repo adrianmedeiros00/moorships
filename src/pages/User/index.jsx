@@ -22,6 +22,7 @@ import {
 } from './styles'
 import InsertShip from '../../components/InsertShip';
 import ModalRequestEditing from '../../components/ModalRequestEditing';
+import { Colors } from '../../assets/constants/Colors';
 
 
 const UserActionsPage = ({ user, actionType }) => {
@@ -83,7 +84,7 @@ const UserActionsPage = ({ user, actionType }) => {
                         <ButtonsContainer>
                             <Button onClick={() => setModalInsertVisible(!isModalInsertVisible)}>Inserir Navio</Button>
                             <Button onClick={() => setModalSolicitationEditingVisible(!isModalSolicitationEditingVisible)}>{actionType}</Button>
-                            <Button onClick={() => setModalTableVisible(!isModalTableVisible)}>Atracações</Button>
+                            <Button onClick={() => setModalTableVisible(!isModalTableVisible)}>Ver Atracações</Button>
                         </ButtonsContainer>
                         <SolicitationsContainer>
                             <SolicitationsTitle>Ultimas Solicitações</SolicitationsTitle>

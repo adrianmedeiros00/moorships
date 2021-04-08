@@ -15,12 +15,12 @@ const ModalRequestEditing = () => {
         <ModalTable>
             <ModalContainer>
                 <HeaderTable>
-                    <TableTitle>Solicitar edição de solicitação anterior</TableTitle>
+                    <TableTitle>Solicitar edição</TableTitle>
                 </HeaderTable>
                 <TextBoxTitle>Digite a edição que deseja:</TextBoxTitle>
                     <SolicitationEditingContainer>
                     <TextBox />
-                    <Button>Solicitar</Button>
+                    <Button>Criar Solicitação</Button>
                     </SolicitationEditingContainer>
             </ModalContainer>
         </ModalTable>

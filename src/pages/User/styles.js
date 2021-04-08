@@ -14,7 +14,7 @@ export const WelcomeText = styled.h2`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
     font-weight: lighter;
     font-size: 20px;
 `
