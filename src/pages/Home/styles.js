@@ -1,21 +1,22 @@
 import styled from "styled-components";
 import { Colors } from '../../assets/constants/Colors'
 
-
 export const Container = styled.div`
-  height: 100vh;
-  width: 80%;
+  height: 100%;
+  width: 70vw;
   display: flex;
-  margin: auto;
+  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
+  padding: 70px;
+  margin: 0 auto;
 `;
 
 export const Header = styled.div`
-  width: 80%;
-  display: flex;
   width: 100%;
+  display: flex;
   flex-direction: row;
-  margin: 3rem auto;
+  margin: 0px auto 3rem;
   justify-content: space-between;
   align-items: center;
 `
@@ -23,9 +24,14 @@ export const Header = styled.div`
 export const Title = styled.h1`
   font-size: 30px;
   color: white;
-  text-shadow: 0.05em 0.1em 0.3em black;
 `;
 
+export const ShipListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`
 
 export const Button = styled.button`
   font-size: 16px;

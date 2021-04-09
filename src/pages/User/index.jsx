@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import Footer from '../../layout/Footer'
 import ShipsList from '../../components/ShipsList/index'
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CloseToToneIcon from '@material-ui/icons/CloseTwoTone'
 import { ExitToApp } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
@@ -17,12 +15,10 @@ import {
     ButtonsContainer,
     SolicitationsContainer,
     SolicitationBox,
-    WelcomeText,
     ShipsInfoContainer,
 } from './styles'
 import InsertShip from '../../components/InsertShip';
 import ModalRequestEditing from '../../components/ModalRequestEditing';
-import { Colors } from '../../assets/constants/Colors';
 
 
 const UserActionsPage = ({ user, actionType }) => {
@@ -63,7 +59,6 @@ const UserActionsPage = ({ user, actionType }) => {
             <Container>
                 <Header>
                     <Title>ShipsMoor</Title>
-                    <WelcomeText>Bem-vindo, {user}<AccountCircleIcon fontSize='large' style={{ marginLeft: '10px', fontSize: '45px' }} /></WelcomeText>
                     <Link to='/signin'
                         style={{
                             textDecoration: 'none',
@@ -86,14 +81,14 @@ const UserActionsPage = ({ user, actionType }) => {
                             <Button onClick={() => setModalSolicitationEditingVisible(!isModalSolicitationEditingVisible)}>{actionType}</Button>
                             <Button onClick={() => setModalTableVisible(!isModalTableVisible)}>Ver Atracações</Button>
                         </ButtonsContainer>
-                        <SolicitationsContainer>
-                            <SolicitationsTitle>Ultimas Solicitações</SolicitationsTitle>
+                    </ActionsContainer>
+                    <SolicitationsContainer>
+                            <SolicitationsTitle>Últimas Solicitações</SolicitationsTitle>
                             <SolicitationBox>Solicitação vai aqui 1</SolicitationBox>
                             <SolicitationBox>Solicitação vai aqui 2</SolicitationBox>
                             <SolicitationBox>Solicitação vai aqui 3</SolicitationBox>
                             <SolicitationBox>Solicitação vai aqui 4</SolicitationBox>
                         </SolicitationsContainer>
-                    </ActionsContainer>
                     <ShipsInfoContainer>
                         <ActionsTitle>Berços e Navios</ActionsTitle>
                         <ShipsList
@@ -103,7 +98,6 @@ const UserActionsPage = ({ user, actionType }) => {
                     </ShipsInfoContainer>
                 </UserContainer>
             </Container>
-            <Footer />
         </>
     )
 }

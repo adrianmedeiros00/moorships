@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 2rem auto;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,12 +10,8 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  display: flex;
   color: white;
-  text-shadow: 0.05em 0.1em 0.3em black;
   font-size: 50px;
-  align-items: center;
-  justify-content: center;
 `;
 
 
