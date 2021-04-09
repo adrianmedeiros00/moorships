@@ -10,6 +10,7 @@ import {
   MiniHeader,
   BackArrow
 } from "./styles";
+import { Colors } from "../../assets/constants/Colors";
 
 
 

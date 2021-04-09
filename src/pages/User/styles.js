@@ -56,6 +56,7 @@ export const ActionsContainer = styled.div`
     max-width: 450px;
     font-size: 16px;
     font-weight: bold;
+    margin-bottom: 12px;
 `
 
 export const ActionsTitle = styled.h1`
