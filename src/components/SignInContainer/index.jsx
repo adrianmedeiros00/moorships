@@ -1,31 +1,35 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 import {
   SignInInput,
   Button,
   Container,
   TextLink,
   LoginTitle,
+  MiniHeader,
+  BackArrow
 } from "./styles";
+
 
 
 const SignInContainer = () => {
   return (
     <Container>
-      <LoginTitle>Login</LoginTitle>
+      <MiniHeader>
+        <LoginTitle>Login</LoginTitle>
+        <BackArrow to='/'>
+          <ArrowBackIcon fontSize='large' style={{fontSize:'40px'}}/>
+        </BackArrow>
+      </MiniHeader>
       <label htmlFor="name">Usuário</label>
       <SignInInput type="text" name="name" />
       <label htmlFor="password">Senha</label>
       <SignInInput type="password" name="password" />
-      <Link to='/'>
-        <Button>Voltar</Button>
-      </Link>
-      <Link to='/user-actions'>
+      <Link to='/user'>
         <Button>Entrar</Button>
       </Link>
-      <Link to='/forgot-password'>
-        <TextLink>Esqueceu sua senha?</TextLink>
-      </Link>
+        <TextLink to='/forgot-password'>Esqueceu sua senha?</TextLink>
     </Container>
   );
 };

@@ -1,75 +1,92 @@
 import styled from 'styled-components'
 import { Colors } from '../../assets/constants/Colors'
 
-
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  width: 100%;
-  padding: 0 50px;
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `
 
 export const WelcomeText = styled.h2`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: ${Colors.secondaryColor};
     font-weight: lighter;
+    font-size: 20px;
 `
-
-export const ShipsInfoContainer = styled.div`
-  width: 100%;
-  max-width: 600px;
-`
-
 
 export const UserContainer = styled.div`
     display: flex;
-    height: 100vh;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+    max-height: auto;
     width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 `
+
+export const BercoShipsTitle = styled.h1`
+  color: ${Colors.secondaryColor};
+  display: flex;
+  align-items: center;
+  margin: 25px auto 15px 0;
+`
+
+export const ShipsInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+`
+
 export const ActionsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 60px;
     width: 100%;
-    max-width: 500px;
-    background-color: ${Colors.primaryColor};
+    height: 100%; 
+    max-width: 450px;
     font-size: 16px;
     font-weight: bold;
 `
 
 export const ActionsTitle = styled.h1`
-  color: white;
+  color: ${Colors.secondaryColor};
   display: flex;
   align-items: center;
-  margin: 0 auto 20px 0;
+  margin: 0 auto 15px 0;
 `
 
 export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between
+    justify-content: space-between;
 `
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 15px;
+  border-radius: 4px;
   height: 40px;
-  width: 100%;
+  width: 144px;
   max-width: 150px;
-  padding: 0 10px;
+  padding: 10px;
   outline: none;
   border: none;
   color: white;
-  background-color: ${Colors.secondaryColor};
+  background-color: ${Colors.quaternaryColor};
   :hover {
-    background-color: rgba(350,30,60);
+    background-color: ${Colors.primaryColor};
     cursor: pointer;
   }
 `
@@ -77,14 +94,15 @@ export const SolicitationsContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 45px auto auto auto;
+  max-width: 450px;
+  margin-bottom: 12px;
 `
 
 export const SolicitationsTitle = styled.h1`
-    color: white;
+    color: ${Colors.secondaryColor};
     display: flex;
     align-items: center;
-    margin: auto auto 20px 0;
+    margin: 25px auto 15px 0;
 `
 
 export const SolicitationBox = styled.div`
@@ -92,11 +110,14 @@ export const SolicitationBox = styled.div`
   width: 100%;
   margin-bottom: 5px;
   padding: 20px;
-  background-color: black;
+  border: 1px ${Colors.secondaryColor} solid;
+  background-color: ${Colors.quaternaryColor};
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  font-weight: lighter;
-  color: white;
+  font-weight: bold;
+  color: ${Colors.secondaryColor};
+  border-radius: 5px;
 `
+
 

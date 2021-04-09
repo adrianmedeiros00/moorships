@@ -1,20 +1,23 @@
 import styled from 'styled-components'
 import { Colors } from '../../assets/constants/Colors'
+
 export const Container = styled.div`
-  height: 100vh;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
 `
 
 export const InfoContainer = styled.div`
-  background-color: ${Colors.primaryColor};
-  color: #DCDCDC;
+  background-color: ${Colors.quaternaryColor};
+  color: ${Colors.quintaColor};
+  border-radius: 0 0 10px 10px;
 `
 
 export const HeaderRowColor = styled.div`
-  background-color: blueviolet;
+  background-color: ${Colors.secondaryColor};
   color: white;
+  border-radius: 10px 10px 0 0;
 `
 
 export const Row = styled.div`
@@ -23,14 +26,11 @@ export const Row = styled.div`
   flex-direction: row;
 `
 
-
 export const Column = styled.h2`
-   border: 1px solid #1C1C1C; 
    font-weight: lighter;
    width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
    height: 50px;
-   max-width: 1360px;
 `

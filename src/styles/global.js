@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Colors } from "../assets/constants/Colors";
 
 
 export default createGlobalStyle`
@@ -12,9 +13,6 @@ export default createGlobalStyle`
 
 
     body{
-        font-size: 14px;
-        color: #F5F5F5;
-        height: 100%;
-        background-color: #1C1C1C;
+        background-color: ${Colors.background};
     }
 `;
