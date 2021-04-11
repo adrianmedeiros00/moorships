@@ -21,8 +21,9 @@ export const Header = styled.div`
   align-items: center;
 `
 
+
 export const Title = styled.h1`
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
   color: ${Colors.quaternaryColor};
 `;
@@ -34,20 +35,6 @@ export const ShipListContainer = styled.div`
   height: 100%;
 `
 
-export const Button = styled.button`
-  font-size: 16px;
-  height: 40px;
-  width: 145px;
-  padding: 0 10px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  color: white;
-  background-color:  ${Colors.quaternaryColor};
-  :hover {
-    background-color:  ${Colors.primaryColor};
-    cursor: pointer;
-  }
-`
+
 
 

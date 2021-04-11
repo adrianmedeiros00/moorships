@@ -11,7 +11,6 @@ export default createGlobalStyle`
         font-family: 'Raleway', sans-serif;
     }
 
-
     body{
         background-color: ${Colors.background};
     }

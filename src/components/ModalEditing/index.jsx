@@ -9,9 +9,11 @@ import {
     ModalCloseButton,
     Button,
     useDisclosure,
-    Select
 } from "@chakra-ui/react"
 import ShipsList from '../ShipsList/index'
+import SelectNavio from '../SelectNavio/index'
+import SelectBerco from '../SelectBerco/index'
+import RemoveButton from './RemoveButton'
 
 const ModalEditing = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -26,7 +28,7 @@ const ModalEditing = () => {
                     <ModalBody>
                     <ShipsList
                             headerTitleColumns={['Navio', 'Berço', 'Ação']}
-                            infoColumns={[<Select name='navio' />, <Select name='berço' />,<Button colorScheme='red' fontWeight='light'>Remover</Button>]}
+                            infoColumns={[<SelectNavio />, <SelectBerco />,<RemoveButton name='Remover' />]}
                             rowsAmount={6} 
                         />
                     </ModalBody>

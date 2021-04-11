@@ -3,13 +3,13 @@ import { Colors } from "../../assets/constants/Colors";
 import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
-  color: ${Colors.secondaryColor};
+  color: ${Colors.quaternaryColor};
   width: 80%;
   max-width: 450px;
   padding: 50px;
   background-color: white;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: 2.5rem auto;
   border-radius: 20px;
@@ -34,6 +34,9 @@ export const LoginTitle = styled.h1`
 
 export const BackArrow = styled(Link)`
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 0 0 25px 0;
   color: ${Colors.quaternaryColor};
   :hover{
     color: ${Colors.primaryColor};

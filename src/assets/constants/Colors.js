@@ -3,6 +3,6 @@ export const Colors = {
   secondaryColor: '#03254c',
   terciaryColor: '#1167b1',
   quaternaryColor:'#187bcd',
-  background: '#f5f5f5',
+  background: '#d3d3d3',
   quintaColor: '#d0efff'
 };

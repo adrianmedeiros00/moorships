@@ -6,7 +6,7 @@ import {
   HeaderRowColor,
   InfoContainer
 } from "./styles";
-import { Select } from '@chakra-ui/react'
+
 
 const ShipsList = ({ headerTitleColumns, infoColumns, rowsAmount }) => {
 

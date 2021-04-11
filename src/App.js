@@ -7,7 +7,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 const App = () => {
   return (
     <>
-      <ChakraProvider >
+        <ChakraProvider >
         <GlobalStyle />
         <Routes />
       </ChakraProvider>
