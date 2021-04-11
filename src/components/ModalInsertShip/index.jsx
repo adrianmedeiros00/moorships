@@ -1,5 +1,5 @@
 import React from 'react'
-import { SelectContainer, Select, SelectTitle } from './styles'
+import { SelectContainer, SelectTitle, StyledButton } from './styles'
 import {
     Modal,
     ModalOverlay,
@@ -8,7 +8,8 @@ import {
     ModalBody,
     ModalCloseButton,
     Button,
-    useDisclosure
+    useDisclosure,
+    Select
 } from "@chakra-ui/react"
 
 
@@ -26,7 +27,7 @@ const InsertShip = () => {
                     <ModalBody>
                         <SelectContainer>
                             <SelectTitle>Selecione o navio</SelectTitle>
-                            <Select name="ship" id="ships">
+                            <Select size='lg' >
                                 <option value="Navio 1">Navio 1</option>
                                 <option value="Navio 2">Navio 2</option>
                                 <option value="Navio 3">Navio 3</option>
@@ -36,7 +37,7 @@ const InsertShip = () => {
                                 <option value="Navio 7">Navio 7</option>
                             </Select>
                             <SelectTitle>Selecione o berço</SelectTitle>
-                            <Select name="bercos" id="bercos">
+                            <Select size='lg' >
                                 <option value="Berco 1">Berco 1</option>
                                 <option value="Berco 2">Berco 2</option>
                                 <option value="Berco 3">Berco 3</option>
@@ -45,7 +46,7 @@ const InsertShip = () => {
                                 <option value="Berco 6">Berco 6</option>
                                 <option value="Berco 7">Berco 7</option>
                             </Select>
-                            <Button onClick={onClose} colorScheme='blue' fontWeight='light'>Confirmar</Button>
+                            <StyledButton onClick={onClose} colorScheme='blue' fontWeight='light'>Confirmar</StyledButton>
                         </SelectContainer>
                     </ModalBody>
                 </ModalContent>

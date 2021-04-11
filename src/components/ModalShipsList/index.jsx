@@ -7,6 +7,7 @@ import {
     ModalContent,
     ModalHeader,
     ModalBody,
+    ModalFooter,
     ModalCloseButton,
     Button,
     useDisclosure
@@ -26,7 +27,11 @@ const ModalShipsList = () => {
                         <ShipsList
                             headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída']}
                             infoColumns={['info1', 'info2', 'info3', 'info4']}
-                            rowsAmount={6} />
+                            rowsAmount={6} 
+                        />
+                        <ModalFooter>
+                        <Button onClick={onClose} colorScheme='red'  fontWeight='light'>Fechar</Button>
+                        </ModalFooter>
                     </ModalBody>
                 </ModalContent>
             </Modal>

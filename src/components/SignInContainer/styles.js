@@ -29,6 +29,7 @@ export const LoginTitle = styled.h1`
   margin-bottom: 35px;
   display: flex;
   align-items: center;
+  font-size: 42px;
 `
 
 export const BackArrow = styled(Link)`

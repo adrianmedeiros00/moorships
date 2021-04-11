@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Container,
   Row,
@@ -7,44 +6,52 @@ import {
   HeaderRowColor,
   InfoContainer
 } from "./styles";
+import { Select } from '@chakra-ui/react'
 
-const ShipsList = ({headerTitleColumns, infoColumns, rowsAmount}) => {
+const ShipsList = ({ headerTitleColumns, infoColumns, rowsAmount }) => {
 
-  const createTitleColumns = (title) => 
-    title.map( title => {
-        return <Column>{title}</Column>
+
+
+  const createTitleColumns = (title) =>
+    title.map(title => {
+      return <Column>{title}</Column>
     })
 
-  const createInfoColumns = (info) =>
-    info.map( info => {
-      return <Column>{info}</Column>
-    })
+
+  const createInfoColumns = (info) => 
+       info.map(info =>
+        <Column>{info}</Column>
+       )
+    
+
+  
+
 
   const createInfoRows = (rows) => {
     const rowsContent = []
-    for(let i = 0; i < rows; i++){
+    for (let i = 0; i < rows; i++) {
       rowsContent.push(
-      <Row>
-        {createInfoColumns(infoColumns)}
-      </Row>)
+        <Row>
+          {createInfoColumns(infoColumns)}
+        </Row>)
     }
-    return rowsContent
+    return rowsContent;
   }
-    
+
 
   return (
-      <Container>
-        <HeaderRowColor>
-          <Row>
-            {createTitleColumns(headerTitleColumns)}
-          </Row>
-        </HeaderRowColor>
+    <Container>
+      <HeaderRowColor>
+        <Row>
+          {createTitleColumns(headerTitleColumns)}
+        </Row>
+      </HeaderRowColor>
 
-        <InfoContainer>
-            {createInfoRows(rowsAmount)}
-        </InfoContainer>
+      <InfoContainer>
+        {createInfoRows(rowsAmount)}
+      </InfoContainer>
 
-      </Container>
+    </Container>
   );
 };
 

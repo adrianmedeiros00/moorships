@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { BackArrow, Button, Container, LoginTitle, MiniHeader, SignInInput } from '../../components/SignInContainer/styles'
 import { Text, Wrapper } from './styles'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
-import { Colors } from '../../assets/constants/Colors'
+
 
 export const ForgotPassword = () => {
     return (

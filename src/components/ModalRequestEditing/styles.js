@@ -7,11 +7,24 @@ export const SolicitationEditingContainer = styled.div`
 `
 export const TextBoxTitle = styled.h2`
     color: ${Colors.primaryColor};
-    margin-bottom: 10px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+`
+export const ButtonsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`
+export const SelectContainer = styled.div`
+    display: flex;
+    flex-direction: column;     
+    width: 45%
 `
 
 export const TextBox = styled.textarea`
-    height: 138px;
+    height: 128px;
     background-color: ${Colors.background};
     width: 100%;
     display: flex;

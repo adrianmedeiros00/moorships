@@ -13,6 +13,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: ${Colors.quaternaryColor};
   font-size: 50px;
+  font-weight: bold;
 `;
 
 

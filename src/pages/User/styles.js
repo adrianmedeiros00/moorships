@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Colors } from '../../assets/constants/Colors'
+import {Link} from 'react-router-dom'
 
 export const Container = styled.div`
   height: 100vh;
@@ -11,17 +12,24 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const WelcomeText = styled.h2`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${Colors.secondaryColor};
-    font-weight: lighter;
-    font-size: 20px;
+export const ExitIcon = styled(Link)`
+  text-decoration: none;
+  color: #DC143C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:22px;
+  font-weight: bold;
+  :hover{
+   color: red;
+  }
 `
+
 
 export const UserContainer = styled.div`
     display: flex;
+    font-weight:bold;
+    font-size: 20px;
     padding: 50px;
     align-items: center;
     justify-content: center;
@@ -64,6 +72,7 @@ export const ActionsTitle = styled.h1`
   display: flex;
   align-items: center;
   margin: 0 auto 15px 0;
+  font-size: 20px;
 `
 
 export const ButtonsContainer = styled.div`
@@ -76,7 +85,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 18px;
   border-radius: 4px;
   height: 40px;
   width: 144px;
@@ -117,7 +126,7 @@ export const SolicitationBox = styled.div`
   justify-content: center;
   font-size: 16px;
   font-weight: bold;
-  color: ${Colors.secondaryColor};
+  color: ${Colors.quintaColor};
   border-radius: 5px;
 `
 

@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ShipsList from '../../components/ShipsList/index'
-import CloseToToneIcon from '@material-ui/icons/CloseTwoTone'
-import { ExitToApp } from '@material-ui/icons'
-import { Link } from 'react-router-dom'
-import { Header, Title } from '../Home/styles'
-import InsertShip from '../../components/InsertShip';
+import ModalInsertShip from '../../components/ModalInsertShip';
 import ModalShipsList from '../../components/ModalShipsList';
 import ModalRequestEditing from '../../components/ModalRequestEditing';
+import { ExitToApp } from '@material-ui/icons'
+import { Header, Title } from '../Home/styles'
 import {
     Container,
     UserContainer,
@@ -18,34 +16,28 @@ import {
     SolicitationBox,
     ShipsInfoContainer,
     BercoShipsTitle,
+    ExitIcon,
 } from './styles'
+import ModalEditing from '../../components/ModalEditing';
 
 
-const UserActionsPage = ({ actionType }) => {
+const UserActionsPage = () => {
     return (
         <>
             <Container>
                 <Header>
                     <Title>ShipsMoor</Title>
-                    <Link to='/signin'
-                        style={{
-                            textDecoration: 'none',
-                            color: '#DC143C',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '22px',
-                            fontWeight: 'bold',
-                        }}>
+                    <ExitIcon to='/signin'>
                         Finalizar sessão
                         <ExitToApp fontSize='large' style={{ marginLeft: '10px' }} />
-                    </Link>
+                    </ExitIcon>
                 </Header>
                 <UserContainer>
                     <ActionsContainer>
                         <ActionsTitle>Ações</ActionsTitle>
                         <ButtonsContainer>
-                            <InsertShip/>
+                            <ModalInsertShip/>
+                            <ModalEditing/>
                             <ModalRequestEditing/>
                             <ModalShipsList/>
                         </ButtonsContainer>
@@ -55,7 +47,7 @@ const UserActionsPage = ({ actionType }) => {
                         <ShipsList
                             headerTitleColumns={['Berços disponíveis', 'Navios na fila']}
                             infoColumns={['info1', 'info2']}
-                            rowsAmount={5} />
+                            rowsAmount={5}/>
                     </ShipsInfoContainer>
                             <SolicitationsContainer>
                                     <SolicitationsTitle>Últimas Solicitações</SolicitationsTitle>
