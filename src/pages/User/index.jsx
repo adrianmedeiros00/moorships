@@ -10,24 +10,56 @@ import {
     UserContainer,
     ActionsContainer,
     ActionsTitle,
-    SolicitationsTitle,
     ButtonsContainer,
     SolicitationsContainer,
-    SolicitationBox,
     ShipsInfoContainer,
     BercoShipsTitle,
     ExitIcon,
+    SolicitationsTitle,
 } from './styles'
-import ModalEditing from '../../components/ModalEditing';
+import Solicitations from '../../components/Solicitations';
+import server from '../../config/axios';
+import { useHistory } from 'react-router';
 
 
 const UserActionsPage = () => {
+    const history = useHistory()
+    const [role, setRole] = useState() 
+    const [solicitationList, setSolicitationList] = useState([])
+
+    useEffect(() => {
+        async function getSolicitations() {
+            const response = await server.get('/solicitations')
+            setSolicitationList(response.data)
+        }
+        getSolicitations()
+    }, [])
+    
+    useEffect(() => {
+        const userJson = localStorage.getItem('user')
+
+        const user = JSON.parse(userJson)
+
+        setRole(user.role)
+    }, [])
+
+    const token = localStorage.getItem('token')
+
+    const handleLogOut = () => {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+    }
+
+    if(!token){
+        history.push('/signin')
+    }
+
     return (
         <>
             <Container>
                 <Header>
                     <Title>ShipsMoor</Title>
-                    <ExitIcon to='/signin'>
+                    <ExitIcon onClick={() => handleLogOut()} to='/signin'>
                         Finalizar sessão
                         <ExitToApp fontSize='large' style={{ marginLeft: '10px' }} />
                     </ExitIcon>
@@ -37,7 +69,6 @@ const UserActionsPage = () => {
                         <ActionsTitle>Ações</ActionsTitle>
                         <ButtonsContainer>
                             <ModalInsertShip/>
-                            <ModalEditing/>
                             <ModalRequestEditing/>
                             <ModalShipsList/>
                         </ButtonsContainer>
@@ -48,13 +79,21 @@ const UserActionsPage = () => {
                             headerTitleColumns={['Berços', 'Situação']}
                             table='dashboard'/>
                     </ShipsInfoContainer>
-                            <SolicitationsContainer>
-                                <SolicitationsTitle>Últimas Solicitações</SolicitationsTitle>
-                                <SolicitationBox>Solicitação vai aqui 1</SolicitationBox>
-                                <SolicitationBox>Solicitação vai aqui 2</SolicitationBox>
-                                <SolicitationBox>Solicitação vai aqui 3</SolicitationBox>
-                                <SolicitationBox>Solicitação vai aqui 4</SolicitationBox>
+                            {solicitationList.length > 0 && role !== "Atracador" ? (
+                                <SolicitationsContainer>
+                                <SolicitationsTitle>Solicitações</SolicitationsTitle>
+                                {solicitationList.map((solicitation) => (
+                                    <Solicitations 
+                                        key={solicitation.id} 
+                                        solicitation_id={solicitation.id} 
+                                        ship_id={solicitation.ship_id} 
+                                        slot={solicitation.slot} 
+                                        description={solicitation.description}
+                                    />
+                                ))}
                             </SolicitationsContainer>
+                            ) : null}
+                            
                 </UserContainer>
             </Container>
         </>

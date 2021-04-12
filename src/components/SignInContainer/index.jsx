@@ -10,6 +10,7 @@ import {
   MiniHeader,
   BackArrow
 } from "./styles";
+
 import server from "../../config/axios";
 
 const SignInContainer = () => {
@@ -27,7 +28,12 @@ const SignInContainer = () => {
 
       setUser(response.data);
 
-      history.push('/user', {user})
+      const jsonUser = JSON.stringify(response.data.user)
+
+      localStorage.setItem('user', jsonUser)
+      localStorage.setItem('token', response.data.token)
+
+      history.push('/user')
     } catch(err) {
       console.log(err.message)
     }

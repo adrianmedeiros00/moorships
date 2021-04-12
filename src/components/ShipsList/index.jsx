@@ -61,7 +61,7 @@ const ShipsList = ({ headerTitleColumns, table }) => {
 
       {table === 'dashboard' ? slots.map(slot => {
         return(
-          <InfoContainer>
+          <InfoContainer key={slot.id}>
             <Row>
               <Column>{slot.id}</Column>
               <Column>{slot.situation}</Column>

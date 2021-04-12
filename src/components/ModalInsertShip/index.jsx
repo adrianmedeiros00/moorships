@@ -16,33 +16,31 @@ import server from '../../config/axios'
 
 const InsertShip = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [name, setName] = useState('')
-    const [type, setType] = useState('')
-    const [slot, setSlot] = useState(1)
+    
+    const [name, setName] = useState()
+    const [type, setType] = useState('Petroleiro')
+    const [slot, setSlot] = useState()
 
     const [slots, setSlots] = useState([])
 
     useEffect(() => {
         async function getSlots() {
             const response = await server.get('/slots')
+            setSlot(response.data[0].id)
             setSlots(response.data)
         }
         getSlots()
     }, [])
 
     async function handleInsertShip () {
-        console.log(name)
-        console.log(type)
-        console.log(slot)
-
         try {
             const response = await server.post('ships', {
                 name,
                 type,
-                slot
+                slot: Number(slot),
             })
     
-            return response.data
+            console.log(response.data)
         } catch(err) {
             console.log(err.message)
         }
@@ -63,7 +61,7 @@ const InsertShip = () => {
                         <Input onChange={(e) => setName(e.target.value)}/>
                         <SelectContainer>
                             <Title>Selecione o tipo navio</Title>
-                            <Select onChange={(e) => setType(e.target.value)} size='lg' >
+                            <Select value={type} onChange={(e) => setType(e.currentTarget.value)} size='lg' >
                                 <option value="Petroleiro">Petroleiro</option>
                                 <option value="Graneleiro">Graneleiro</option>
                                 <option value="Cargueiro">Cargueiro</option>
@@ -73,10 +71,10 @@ const InsertShip = () => {
                                 <option value="Aviso">Aviso</option>
                             </Select>
                             <Title>Selecione o berço</Title>
-                            <Select onChange={(e) => setSlot(Number(e.target.value))} size='lg' >
-                                {availableSlots.map((slot) => 
+                            <Select value={slot} onChange={(e) => setSlot(e.currentTarget.value)} size='lg' >
+                                {availableSlots.length > 0 ? availableSlots.map((slot) => 
                                     <option value={slot.id}>{`Berço ${slot.id}`}</option>
-                                )}
+                                ) : null}
 
                             </Select>
                             <StyledButton onClick={() => {handleInsertShip()}} colorScheme='blue' fontWeight='light'>Confirmar</StyledButton>
