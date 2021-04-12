@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import ShipsList from '../../components/ShipsList/index'
 import ModalInsertShip from '../../components/ModalInsertShip';
 import ModalShipsList from '../../components/ModalShipsList';
@@ -45,17 +45,16 @@ const UserActionsPage = () => {
                     <ShipsInfoContainer>
                         <BercoShipsTitle>Berços e Navios</BercoShipsTitle>
                         <ShipsList
-                            headerTitleColumns={['Berços disponíveis', 'Navios na fila']}
-                            infoColumns={['info1', 'info2']}
-                            rowsAmount={5}/>
+                            headerTitleColumns={['Berços', 'Situação']}
+                            table='dashboard'/>
                     </ShipsInfoContainer>
                             <SolicitationsContainer>
-                                    <SolicitationsTitle>Últimas Solicitações</SolicitationsTitle>
-                                    <SolicitationBox>Solicitação vai aqui 1</SolicitationBox>
-                                    <SolicitationBox>Solicitação vai aqui 2</SolicitationBox>
-                                    <SolicitationBox>Solicitação vai aqui 3</SolicitationBox>
-                                    <SolicitationBox>Solicitação vai aqui 4</SolicitationBox>
-                                </SolicitationsContainer>
+                                <SolicitationsTitle>Últimas Solicitações</SolicitationsTitle>
+                                <SolicitationBox>Solicitação vai aqui 1</SolicitationBox>
+                                <SolicitationBox>Solicitação vai aqui 2</SolicitationBox>
+                                <SolicitationBox>Solicitação vai aqui 3</SolicitationBox>
+                                <SolicitationBox>Solicitação vai aqui 4</SolicitationBox>
+                            </SolicitationsContainer>
                 </UserContainer>
             </Container>
         </>

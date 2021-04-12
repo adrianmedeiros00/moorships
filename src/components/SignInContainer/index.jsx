@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from 'react-router-dom'
+import React, {useState} from "react";
+import { useHistory } from 'react-router-dom'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 import {
   SignInInput,
@@ -10,11 +10,30 @@ import {
   MiniHeader,
   BackArrow
 } from "./styles";
-
-
-
+import server from "../../config/axios";
 
 const SignInContainer = () => {
+  const history = useHistory()
+  const [user, setUser] = useState({})
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  async function handleSignIn() {
+    try{
+      const response = await server.post('/sessions', {
+        email,
+        password
+      })
+
+      setUser(response.data);
+
+      history.push('/user', {user})
+    } catch(err) {
+      console.log(err.message)
+    }
+
+  }
+
   return (
     <Container>
       <MiniHeader>
@@ -24,13 +43,11 @@ const SignInContainer = () => {
         </BackArrow>
       </MiniHeader>
       <label htmlFor="name">Usuário</label>
-      <SignInInput type="text" name="name" />
+      <SignInInput type="text" onChange={(e) => setEmail(e.target.value)} name="name" />
       <label htmlFor="password">Senha</label>
-      <SignInInput type="password" name="password" />
-      <Link to='/user'>
-        <Button>Entrar</Button>
-      </Link>
-        <TextLink to='/forgot-password'>Esqueceu sua senha?</TextLink>
+      <SignInInput type="password" onChange={(e) => setPassword(e.target.value)} name="password" />
+      <Button onClick={() => handleSignIn()}>Entrar</Button>
+      <TextLink to='/forgot-password'>Esqueceu sua senha?</TextLink>
     </Container>
   );
 };

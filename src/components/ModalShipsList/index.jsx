@@ -25,9 +25,8 @@ const ModalShipsList = () => {
                     <ModalCloseButton />
                     <ModalBody>
                         <ShipsList
-                            headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída']}
-                            infoColumns={['info1', 'info2', 'info3', 'info4']}
-                            rowsAmount={6} 
+                            headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Tipo']}
+                            table='home' 
                         />
                         <ModalFooter>
                         <Button onClick={onClose} colorScheme='red'  fontWeight='light'>Fechar</Button>

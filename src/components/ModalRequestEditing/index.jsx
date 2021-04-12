@@ -12,12 +12,23 @@ import {
 } from "@chakra-ui/react"
 import { SolicitationEditingContainer, TextBoxTitle, TextBox, ButtonsContainer, SelectContainer } from './styles';
 import { StyledButton } from '../ModalInsertShip/styles'
+import server from '../../config/axios'
 
 
 const ModalRequestEditing = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [newBercoVisibility, setNewBercoVisibility] = useState(false)
     const [description, setDescription] = useState([])
+    const [ships, setShips] = useState([])
+
+    useEffect(() => {
+        async function getShips() {
+            const response = await server.get('/ships')
+            setShips(response.data)
+        }
+
+        getShips()
+    }, [])
 
      return (
         <>
@@ -31,33 +42,26 @@ const ModalRequestEditing = () => {
                         <SolicitationEditingContainer>
                             <TextBoxTitle>Selecione o navio para solicitar edição</TextBoxTitle>
                             <Select size='lg' onChange={() => setDescription(description + '"navio selecionado " ')}>
-                                <option value="Navio 1">Navio 1</option>
-                                <option value="Navio 2">Navio 2</option>
-                                <option value="Navio 3">Navio 3</option>
-                                <option value="Navio 4">Navio 4</option>
-                                <option value="Navio 5">Navio 5</option>
-                                <option value="Navio 6">Navio 6</option>
-                                <option value="Navio 7">Navio 7</option>
+                                {ships.map(ship => (
+                                    <option value={ship.id}>{ship.name}</option>
+                                ))}
                             </Select>
                             <TextBoxTitle>Ações</TextBoxTitle>
                                     <ButtonsContainer>
-                                    <Button onClick={() => setNewBercoVisibility(!newBercoVisibility)} colorScheme='blue' fontWeight='light'>Novo berço</Button>
+                                    <Button onClick={() => setNewBercoVisibility(!newBercoVisibility)} colorScheme='blue' fontWeight='light'>Definir destino</Button>
                                     {newBercoVisibility &&
                                     <>
                                     <SelectContainer>
                                         <Select size='lg' onChange={() => setDescription(description + '"novo berço selecionado " ')}>
-                                            <option value="Berco 1">Berco 1</option>
-                                            <option value="Berco 2">Berco 2</option>
-                                            <option value="Berco 3">Berco 3</option>
-                                            <option value="Berco 4">Berco 4</option>
-                                            <option value="Berco 5">Berco 5</option>
-                                            <option value="Berco 6">Berco 6</option>
-                                            <option value="Berco 7">Berco 7</option>
+                                            <option value="1">Berco 1</option>
+                                            <option value="2">Berco 2</option>
+                                            <option value="3">Berco 3</option>
+                                            <option value="4">Berco 4</option>
+                                            <option value="0">Remover</option>
                                         </Select>
                                     </SelectContainer>
                                         </>
                                     }
-                                    <Button colorScheme='red' fontWeight='light' onClick={() => setDescription(description + 'Remover do berço ')}>Remoção</Button>
                                     </ButtonsContainer>
                             <TextBoxTitle>Descrição</TextBoxTitle>
                             <TextBox value={description}/>
