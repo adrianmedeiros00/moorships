@@ -10,16 +10,15 @@ import {
     UserContainer,
     ActionsContainer,
     ActionsTitle,
-    SolicitationsTitle,
     ButtonsContainer,
     SolicitationsContainer,
-    SolicitationBox,
     ShipsInfoContainer,
     BercoShipsTitle,
     ExitIcon,
+    SolicitationsTitle,
 } from './styles'
-import ModalEditing from '../../components/ModalEditing';
-
+import ShipsQueue from '../../components/ShipsQueue'
+import Solicitations from '../../components/Solicitations';
 
 const UserActionsPage = () => {
     return (
@@ -37,7 +36,6 @@ const UserActionsPage = () => {
                         <ActionsTitle>Ações</ActionsTitle>
                         <ButtonsContainer>
                             <ModalInsertShip/>
-                            <ModalEditing/>
                             <ModalRequestEditing/>
                             <ModalShipsList/>
                         </ButtonsContainer>
@@ -45,17 +43,17 @@ const UserActionsPage = () => {
                     <ShipsInfoContainer>
                         <BercoShipsTitle>Berços e Navios</BercoShipsTitle>
                         <ShipsList
-                            headerTitleColumns={['Berços disponíveis', 'Navios na fila']}
-                            infoColumns={['info1', 'info2']}
+                            headerTitleColumns={['Berços', 'Situação', 'Fila']}
+                            infoColumns={['1', 'ocupado', <ShipsQueue/>]}
                             rowsAmount={5}/>
                     </ShipsInfoContainer>
                             <SolicitationsContainer>
-                                    <SolicitationsTitle>Últimas Solicitações</SolicitationsTitle>
-                                    <SolicitationBox>Solicitação vai aqui 1</SolicitationBox>
-                                    <SolicitationBox>Solicitação vai aqui 2</SolicitationBox>
-                                    <SolicitationBox>Solicitação vai aqui 3</SolicitationBox>
-                                    <SolicitationBox>Solicitação vai aqui 4</SolicitationBox>
-                                </SolicitationsContainer>
+                                <SolicitationsTitle>Solicitações</SolicitationsTitle>
+                                <Solicitations/>
+                                <Solicitations/>
+                                <Solicitations/>
+                                <Solicitations/>
+                            </SolicitationsContainer>
                 </UserContainer>
             </Container>
         </>

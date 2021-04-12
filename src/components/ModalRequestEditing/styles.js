@@ -20,7 +20,7 @@ export const ButtonsContainer = styled.div`
 export const SelectContainer = styled.div`
     display: flex;
     flex-direction: column;     
-    width: 45%
+    width: 60%
 `
 
 export const TextBox = styled.textarea`

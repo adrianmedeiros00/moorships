@@ -28,7 +28,7 @@ export const Row = styled.div`
 
 export const Column = styled.h2`
    font-weight: lighter;
-   font-size: 24px;
+   font-size: 20px;
    width: 100%;
    display: flex;
    justify-content: center;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import {
     Modal,
     ModalOverlay,
@@ -10,27 +10,27 @@ import {
     useDisclosure,
     Select
 } from "@chakra-ui/react"
-import { SolicitationEditingContainer, TextBoxTitle, TextBox, ButtonsContainer, SelectContainer } from './styles';
+import { SolicitationEditingContainer, TextBoxTitle, ButtonsContainer, SelectContainer } from './styles';
 import { StyledButton } from '../ModalInsertShip/styles'
 
 
 const ModalRequestEditing = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [newBercoVisibility, setNewBercoVisibility] = useState(false)
-    const [description, setDescription] = useState([])
+    const [visibility, setVisibility] = useState(false)
+
 
      return (
         <>
-            <Button onClick={onOpen} colorScheme='blue' fontWeight='light' >Solicitar Edição</Button>
+            <Button onClick={onOpen} colorScheme='blue' fontWeight='light'  w='128px' mb='20px'>Solicitar Edição</Button>
             <Modal size='xl' isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Solicitar Edição</ModalHeader>
-                    <ModalCloseButton />
+                    <ModalCloseButton  onClick={() => setVisibility(false)} />
                     <ModalBody>
                         <SolicitationEditingContainer>
                             <TextBoxTitle>Selecione o navio para solicitar edição</TextBoxTitle>
-                            <Select size='lg' onChange={() => setDescription(description + '"navio selecionado " ')}>
+                            <Select size='lg' >
                                 <option value="Navio 1">Navio 1</option>
                                 <option value="Navio 2">Navio 2</option>
                                 <option value="Navio 3">Navio 3</option>
@@ -41,11 +41,11 @@ const ModalRequestEditing = () => {
                             </Select>
                             <TextBoxTitle>Ações</TextBoxTitle>
                                     <ButtonsContainer>
-                                    <Button onClick={() => setNewBercoVisibility(!newBercoVisibility)} colorScheme='blue' fontWeight='light'>Novo berço</Button>
-                                    {newBercoVisibility &&
+                                    <Button onClick={() => setVisibility(!visibility)} colorScheme='blue' fontWeight='light'>Escolher Destino</Button>
+                                    {visibility &&
                                     <>
                                     <SelectContainer>
-                                        <Select size='lg' onChange={() => setDescription(description + '"novo berço selecionado " ')}>
+                                        <Select  size='lg' >
                                             <option value="Berco 1">Berco 1</option>
                                             <option value="Berco 2">Berco 2</option>
                                             <option value="Berco 3">Berco 3</option>
@@ -53,16 +53,13 @@ const ModalRequestEditing = () => {
                                             <option value="Berco 5">Berco 5</option>
                                             <option value="Berco 6">Berco 6</option>
                                             <option value="Berco 7">Berco 7</option>
+                                            <option value="Remover">Remover</option>
                                         </Select>
                                     </SelectContainer>
                                         </>
                                     }
-                                    <Button colorScheme='red' fontWeight='light' onClick={() => setDescription(description + 'Remover do berço ')}>Remoção</Button>
                                     </ButtonsContainer>
-                            <TextBoxTitle>Descrição</TextBoxTitle>
-                            <TextBox value={description}/>
-                                    <Button colorScheme='red' variant='ghost' fontWeight='light' onClick={() => setDescription('')}>Apagar</Button>
-                            <StyledButton onClick={onClose} colorScheme='blue' fontWeight='light'>Enviar</StyledButton>
+                            <StyledButton onClick={onClose} colorScheme='blue' fontWeight='light'>Enviar solicitação</StyledButton>
                         </SolicitationEditingContainer>
                     </ModalBody>
                 </ModalContent>

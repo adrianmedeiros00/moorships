@@ -24,9 +24,6 @@ const ShipsList = ({ headerTitleColumns, infoColumns, rowsAmount }) => {
        )
     
 
-  
-
-
   const createInfoRows = (rows) => {
     const rowsContent = []
     for (let i = 0; i < rows; i++) {

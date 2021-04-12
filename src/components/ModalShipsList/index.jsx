@@ -7,7 +7,6 @@ import {
     ModalContent,
     ModalHeader,
     ModalBody,
-    ModalFooter,
     ModalCloseButton,
     Button,
     useDisclosure
@@ -17,7 +16,7 @@ const ModalShipsList = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-            <Button onClick={onOpen} colorScheme='blue' fontWeight='light'>Atracações</Button>
+            <Button onClick={onOpen} colorScheme='blue' fontWeight='light'  w='128px' >Atracações</Button>
             <Modal size='xl' isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
@@ -29,9 +28,7 @@ const ModalShipsList = () => {
                             infoColumns={['info1', 'info2', 'info3', 'info4']}
                             rowsAmount={6} 
                         />
-                        <ModalFooter>
-                        <Button onClick={onClose} colorScheme='red'  fontWeight='light'>Fechar</Button>
-                        </ModalFooter>
+                      
                     </ModalBody>
                 </ModalContent>
             </Modal>

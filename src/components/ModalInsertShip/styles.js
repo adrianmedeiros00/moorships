@@ -12,7 +12,7 @@ export const StyledButton = styled(Button)`
 `
 
 
-export const SelectTitle = styled.h2`
+export const Title = styled.h2`
     color: ${Colors.primaryColor};
     margin: 15px 0;
     font-size:18px;

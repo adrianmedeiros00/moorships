@@ -19,6 +19,10 @@ export const Header = styled.div`
   margin: 0px auto 3rem;
   justify-content: space-between;
   align-items: center;
+
+  @media(max-width: 1293px){
+      max-width: 450px;
+    }
 `
 
 
