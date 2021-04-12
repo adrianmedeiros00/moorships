@@ -1,4 +1,5 @@
 import React from "react";
+import moment from 'moment'
 import {
   Container,
   Row,
@@ -9,35 +10,10 @@ import {
 
 
 const ShipsList = ({ headerTitleColumns, infoColumns, rowsAmount }) => {
-
-
-
   const createTitleColumns = (title) =>
     title.map(title => {
       return <Column>{title}</Column>
     })
-
-
-  const createInfoColumns = (info) => 
-       info.map(info =>
-        <Column>{info}</Column>
-       )
-    
-
-  
-
-
-  const createInfoRows = (rows) => {
-    const rowsContent = []
-    for (let i = 0; i < rows; i++) {
-      rowsContent.push(
-        <Row>
-          {createInfoColumns(infoColumns)}
-        </Row>)
-    }
-    return rowsContent;
-  }
-
 
   return (
     <Container>
@@ -46,13 +22,20 @@ const ShipsList = ({ headerTitleColumns, infoColumns, rowsAmount }) => {
           {createTitleColumns(headerTitleColumns)}
         </Row>
       </HeaderRowColor>
-
-      <InfoContainer>
-        {createInfoRows(rowsAmount)}
-      </InfoContainer>
-
+      {infoColumns.map((info) => {
+        return(
+          <InfoContainer>
+            <Row>
+            <Column>{info.name}</Column>
+            <Column>{info.slot}</Column>
+            <Column>{moment(info.created_at).format('L')}</Column>
+            <Column>{info.type}</Column>
+            </Row>
+          </InfoContainer>
+        )
+      })}
     </Container>
-  );
-};
+  )
+}
 
 export default ShipsList;

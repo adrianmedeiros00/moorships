@@ -11,7 +11,6 @@ export const Container = styled.div`
 export const InfoContainer = styled.div`
   background-color: ${Colors.quaternaryColor};
   color: ${Colors.quintaColor};
-  border-radius: 0 0 10px 10px;
 `
 
 export const HeaderRowColor = styled.div`
@@ -21,6 +20,8 @@ export const HeaderRowColor = styled.div`
 `
 
 export const Row = styled.div`
+  font-weight: lighter;
+  font-size: 24px;
   width: 100%;
   display: flex;
   flex-direction: row;

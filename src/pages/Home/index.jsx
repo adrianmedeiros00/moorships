@@ -1,10 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import ShipsList from "../../components/ShipsList";
 import { Container, Title, Header, ShipListContainer } from "./styles";
 import { Link } from 'react-router-dom'
 import { Button } from '@chakra-ui/react'
+import server from "../../config/axios";
 
 const Home = () => {
+  const [ships, setShips] = useState([])
+
+  useEffect(() => {
+    async function getShips() {
+      const response = await server.get('/ships')
+      console.log(response)
+      setShips(response.data)
+    }
+    getShips()
+  }, [])
+
   return (
       <Container>
         <Header>
@@ -16,8 +28,8 @@ const Home = () => {
         <ShipListContainer>
           <ShipsList
             headerTitleColumns={['Navio', 'Berço', 'Entrada', 'Saída']}
-            infoColumns={['info1', 'info2', 'info3', 'info4']}
-            rowsAmount={6}
+            infoColumns={ships}
+            rowsAmount={ships.length}
           />
         </ShipListContainer>
       </Container>
